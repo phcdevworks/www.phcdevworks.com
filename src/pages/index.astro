@@ -1,116 +1,134 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const suiteProducts = [
-  {
-    name: "Spectre Tokens",
-    url: "https://github.com/phcdevworks/spectre-tokens",
-    summary:
-      "Design-token foundation for every Spectre surface with JSON, JS/TS, CSS variable, and Tailwind outputs.",
-  },
-  {
-    name: "Spectre UI",
-    url: "https://github.com/phcdevworks/spectre-ui",
-    summary:
-      "Core styling layer that consumes the tokens and ships base/components/utilities CSS plus recipe helpers.",
-  },
-  {
-    name: "Spectre UI Astro",
-    url: "https://github.com/phcdevworks/spectre-ui-astro",
-    summary:
-      "Astro integration exposing typed primitives that map directly to Spectre UI classes with no duplicated styling logic.",
-  },
-  {
-    name: "Spectre Icons",
-    url: "https://github.com/phcdevworks/spectre-icons",
-    summary:
-      "Product-ready iconography system tuned to Spectre spacing, stroke, and typography scales.",
-  },
-];
 ---
 
 <BaseLayout
-  title="Spectre UI Astro"
-  description="Astro components powered by Spectre Tokens and Spectre UI. Build cohesive product surfaces with one plugin."
+  title="PHCDevworks"
+  description="No images. No animations. No nonsense. Just text and links. This is PHCDevworks."
 >
-  <section class="sp-container sp-py-16 sp-space-y-12">
-    <article class="sp-space-y-4">
-      <p class="sp-font-mono sp-text-sm sp-uppercase sp-text-accent">
-        Spectre UI Astro
+  <section class="sp-container sp-py-20 sp-space-y-16 sp-max-w-4xl">
+    <article class="sp-space-y-6">
+      <h1 class="sp-text-display sp-leading-tight sp-text-6xl">PHCDevworks</h1>
+      <p class="sp-text-2xl sp-leading-relaxed">
+        No images. No animations. No nonsense.<br />
+        Just text and links.
       </p>
-      <h1 class="sp-text-display sp-leading-tight">
-        Token-aligned Astro experiences, explained plainly.
-      </h1>
-      <p class="sp-text-lg sp-text-muted">
-        This site is intentionally text-only so you can scan what Spectre ships
-        without decorative UI. Everything below points you to the GitHub repos
-        that compose the Spectre suite.
+      <p class="sp-text-xl sp-text-muted sp-leading-relaxed">
+        We build design systems, UI tooling, and developer infrastructure.
+        Everything is open source. Everything is on GitHub.
       </p>
     </article>
 
-    <article class="sp-space-y-3">
-      <h2 class="sp-text-2xl sp-font-semibold">Installation summary</h2>
-      <p class="sp-text-muted">
-        Install the Astro integration and the base CSS package, import the CSS
-        bundles once, and start composing components.
-      </p>
-      <pre class="sp-bg-surface sp-rounded-lg sp-p-4 sp-overflow-auto sp-text-sm">
-npm install @phcdevworks/spectre-ui-astro @phcdevworks/spectre-ui
-      </pre>
-      <pre class="sp-bg-surface sp-rounded-lg sp-p-4 sp-overflow-auto sp-text-sm">
-{`// src/layouts/BaseLayout.astro
-import "@phcdevworks/spectre-ui/base.css";
-import "@phcdevworks/spectre-ui/components.css";
-import "@phcdevworks/spectre-ui/utilities.css";`}
-      </pre>
+    <article class="sp-space-y-8 sp-border-t sp-border-muted sp-pt-12">
+      <h2 class="sp-text-3xl sp-font-semibold">What We Build</h2>
+
+      <div class="sp-space-y-6">
+        <div>
+          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
+            <a
+              href="https://github.com/phcdevworks/spectre-tokens"
+              class="sp-underline sp-text-accent hover:sp-no-underline"
+            >
+              Spectre Tokens
+            </a>
+          </h3>
+          <p class="sp-text-muted sp-leading-relaxed">
+            Design tokens that define the visual language. JSON, JS/TS, CSS
+            variables, and Tailwind outputs. One source of truth for every
+            surface.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
+            <a
+              href="https://github.com/phcdevworks/spectre-ui"
+              class="sp-underline sp-text-accent hover:sp-no-underline"
+            >
+              Spectre UI
+            </a>
+          </h3>
+          <p class="sp-text-muted sp-leading-relaxed">
+            Core styling layer. Consumes tokens, ships CSS. Base styles,
+            components, utilities, and recipe helpers. No framework lock-in.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
+            <a
+              href="https://github.com/phcdevworks/spectre-ui-astro"
+              class="sp-underline sp-text-accent hover:sp-no-underline"
+            >
+              Spectre UI Astro
+            </a>
+          </h3>
+          <p class="sp-text-muted sp-leading-relaxed">
+            Astro integration. Typed components that map to Spectre UI classes.
+            No duplicated logic. No style bloat.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
+            <a
+              href="https://github.com/phcdevworks/spectre-icons"
+              class="sp-underline sp-text-accent hover:sp-no-underline"
+            >
+              Spectre Icons
+            </a>
+          </h3>
+          <p class="sp-text-muted sp-leading-relaxed">
+            Icon system tuned to Spectre spacing, stroke, and typography scales.
+            Product-ready, no fuss.
+          </p>
+        </div>
+      </div>
     </article>
 
-    <article class="sp-space-y-4">
-      <h2 class="sp-text-2xl sp-font-semibold">Why the plugin exists</h2>
-      <ul class="sp-list-disc sp-pl-6 sp-space-y-2">
-        <li>
-          Spectre Tokens define the visual language once; every integration
-          consumes them.
-        </li>
-        <li>
-          Spectre UI wraps those tokens with prebuilt CSS so frameworks never
-          re-encode class recipes.
-        </li>
-        <li>
-          Spectre UI Astro simply exposes the recipes as idiomatic Astro
-          components—no extra styling layer.
-        </li>
-      </ul>
+    <article class="sp-space-y-6 sp-border-t sp-border-muted sp-pt-12">
+      <h2 class="sp-text-3xl sp-font-semibold">Philosophy</h2>
+      <div class="sp-space-y-4 sp-text-lg sp-leading-relaxed">
+        <p>Design tokens once. Use everywhere. No copy-paste. No drift.</p>
+        <p>
+          CSS that consumes tokens. Components that consume CSS. Clean layers.
+          Clear dependencies.
+        </p>
+        <p>
+          Open source. No vendor lock. Build what you need. Modify what you
+          want.
+        </p>
+        <p>
+          This website proves the point: great design doesn't need decoration.
+          It needs clarity.
+        </p>
+      </div>
     </article>
 
-    <article class="sp-space-y-4">
-      <h2 class="sp-text-2xl sp-font-semibold">Spectre products</h2>
-      <p class="sp-text-muted">
-        Each repository below is part of the same system. Explore them directly
-        for documentation, changelogs, and roadmaps.
-      </p>
-      <dl class="sp-space-y-4">
-        {suiteProducts.map((product) => (
-          <>
-            <dt class="sp-font-semibold">{product.name}</dt>
-            <dd class="sp-text-muted">
-              <span>{product.summary} </span>
-              <a class="sp-text-accent sp-underline" href={product.url}>
-                {product.url}
-              </a>
-            </dd>
-          </>
-        ))}
-      </dl>
+    <article class="sp-space-y-6 sp-border-t sp-border-muted sp-pt-12">
+      <h2 class="sp-text-3xl sp-font-semibold">Links</h2>
+      <div class="sp-space-y-2 sp-text-lg">
+        <p>
+          <a
+            href="https://github.com/phcdevworks"
+            class="sp-underline sp-text-accent hover:sp-no-underline"
+          >
+            github.com/phcdevworks
+          </a>
+        </p>
+        <p class="sp-text-muted">
+          All repos. All docs. All roadmaps. Everything lives on GitHub.
+        </p>
+      </div>
     </article>
 
-    <article class="sp-space-y-3">
-      <h2 class="sp-text-2xl sp-font-semibold">Need more?</h2>
+    <footer
+      class="sp-border-t sp-border-muted sp-pt-12 sp-text-muted sp-text-sm"
+    >
       <p>
-        Roadmaps, contribution guides, and sponsorship links live in each repo.
-        This page stays text-only by design so the focus remains on the suite
-        rather than a visual demo.
+        © 2025 PHCDevworks. Text-only by design. No tracking. No analytics. No
+        cookies.
       </p>
-    </article>
+    </footer>
   </section>
 </BaseLayout>
