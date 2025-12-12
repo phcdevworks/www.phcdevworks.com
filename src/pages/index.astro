@@ -1,35 +1,30 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { SpButton, SpCard, SpInput } from "@phcdevworks/spectre-ui-astro";
 
 const suiteProducts = [
   {
     name: "Spectre Tokens",
-    tagline: "Design-token foundation",
-    description:
-      "The source of truth for colors, typography, spacing, motion, and CRO-focused button + form states. It outputs JS/TS objects, CSS variables, and Tailwind presets so every surface stays in sync.",
-    href: "https://github.com/phcdevworks/spectre-tokens",
+    url: "https://github.com/phcdevworks/spectre-tokens",
+    summary:
+      "Design-token foundation for every Spectre surface with JSON, JS/TS, CSS variable, and Tailwind outputs.",
   },
   {
     name: "Spectre UI",
-    tagline: "Core styling layer",
-    description:
-      "Framework-agnostic CSS bundles and recipe helpers that consume Spectre Tokens. Import once to unlock `base`, `components`, and `utilities` plus the official Tailwind preset.",
-    href: "https://github.com/phcdevworks/spectre-ui",
+    url: "https://github.com/phcdevworks/spectre-ui",
+    summary:
+      "Core styling layer that consumes the tokens and ships base/components/utilities CSS plus recipe helpers.",
   },
   {
     name: "Spectre UI Astro",
-    tagline: "Integration you are viewing",
-    description:
-      "Thin Astro components (`<SpButton>`, `<SpCard>`, `<SpInput>`) with type-safe APIs, polymorphic rendering, and zero duplicated styling logic. Everything maps directly to Spectre UI classes.",
-    href: "https://github.com/phcdevworks/spectre-ui-astro",
+    url: "https://github.com/phcdevworks/spectre-ui-astro",
+    summary:
+      "Astro integration exposing typed primitives that map directly to Spectre UI classes with no duplicated styling logic.",
   },
   {
     name: "Spectre Icons",
-    tagline: "Iconography system",
-    description:
-      "Consistent, optically-balanced icons tuned for Spectre's typography and spacing scales. Drop them into buttons, inputs, or content blocks with shared sizing tokens.",
-    href: "https://github.com/phcdevworks/spectre-icons",
+    url: "https://github.com/phcdevworks/spectre-icons",
+    summary:
+      "Product-ready iconography system tuned to Spectre spacing, stroke, and typography scales.",
   },
 ];
 ---
@@ -38,205 +33,84 @@ const suiteProducts = [
   title="Spectre UI Astro"
   description="Astro components powered by Spectre Tokens and Spectre UI. Build cohesive product surfaces with one plugin."
 >
-  <section class="sp-container sp-py-16 sp-space-y-16">
-    <SpCard
-      variant="elevated"
-      class="sp-max-w-5xl sp-w-full sp-mx-auto sp-rounded-2xl sp-p-10 sp-space-y-6 sp-bg-gradient-to-br sp-from-surface-card sp-to-surface-input"
-    >
-      <header class="sp-space-y-3">
-        <p class="sp-font-mono sp-text-sm sp-uppercase sp-text-accent">
-          @phcdevworks/spectre-ui-astro
-        </p>
-        <h1 class="sp-text-display sp-leading-tight">
-          Token-perfect, Astro-native UI primitives.
-        </h1>
-        <p class="sp-text-lg sp-text-muted">
-          Every component in this plugin is just a typed wrapper around
-          Spectre UI recipes, so your Astro pages inherit the exact CRO-focused
-          design language that powers the entire Spectre suite.
-        </p>
-      </header>
-      <div class="sp-flex sp-flex-wrap sp-gap-4">
-        <SpButton
-          as="a"
-          href="https://github.com/phcdevworks/spectre-ui-astro"
-          variant="primary"
-          size="lg"
-        >
-          View plugin on GitHub
-        </SpButton>
-        <SpButton as="a" href="#components" variant="ghost" size="lg">
-          Explore components
-        </SpButton>
-        <SpButton as="a" href="#suite" variant="secondary" size="lg">
-          Meet the Spectre suite
-        </SpButton>
-      </div>
-    </SpCard>
+  <section class="sp-container sp-py-16 sp-space-y-12">
+    <article class="sp-space-y-4">
+      <p class="sp-font-mono sp-text-sm sp-uppercase sp-text-accent">
+        Spectre UI Astro
+      </p>
+      <h1 class="sp-text-display sp-leading-tight">
+        Token-aligned Astro experiences, explained plainly.
+      </h1>
+      <p class="sp-text-lg sp-text-muted">
+        This site is intentionally text-only so you can scan what Spectre ships
+        without decorative UI. Everything below points you to the GitHub repos
+        that compose the Spectre suite.
+      </p>
+    </article>
 
-    <section
-      class="sp-grid sp-grid-cols-1 md:sp-grid-cols-3 sp-gap-6 sp-text-on-surface"
-    >
-      <SpCard variant="outlined" class="sp-p-6 sp-space-y-3">
-        <p class="sp-font-mono sp-text-xs sp-text-accent">01</p>
-        <h2 class="sp-text-xl sp-font-semibold">Token-powered</h2>
-        <p class="sp-text-muted">
-          Consumes Spectre Tokens and Spectre UI so surfaces ship with semantic
-          colors, typography, spacing, and WCAG-accessible focus states by
-          default.
-        </p>
-      </SpCard>
-      <SpCard variant="outlined" class="sp-p-6 sp-space-y-3">
-        <p class="sp-font-mono sp-text-xs sp-text-accent">02</p>
-        <h2 class="sp-text-xl sp-font-semibold">Typed + ergonomic</h2>
-        <p class="sp-text-muted">
-          Components export discriminated unions for variants, sizes, and states
-          so IDEs guide usage. No guessing at classes or boolean soup.
-        </p>
-      </SpCard>
-      <SpCard variant="outlined" class="sp-p-6 sp-space-y-3">
-        <p class="sp-font-mono sp-text-xs sp-text-accent">03</p>
-        <h2 class="sp-text-xl sp-font-semibold">Astro-native</h2>
-        <p class="sp-text-muted">
-          Pure Astro components that SSR anywhere. Polymorphic rendering lets
-          you switch between `button`, `a`, or `span` without losing Spectre
-          behavior.
-        </p>
-      </SpCard>
-    </section>
-
-    <SpCard
-      variant="elevated"
-      class="sp-p-8 sp-flex sp-flex-col lg:sp-flex-row sp-gap-8 sp-items-start"
-    >
-      <div class="sp-space-y-3 sp-flex-1">
-        <p class="sp-font-mono sp-text-xs sp-text-accent">Installation</p>
-        <h2 class="sp-text-2xl sp-font-semibold">Drop in with three steps</h2>
-        <p class="sp-text-muted">
-          Install the packages, import the CSS bundle in a layout, and start
-          composing Spectre primitives directly inside Astro templates.
-        </p>
-        <div class="sp-flex sp-flex-col sp-gap-4 sp-font-mono sp-text-sm">
-          <pre class="sp-bg-surface sp-rounded-lg sp-p-4">
-<code>npm install @phcdevworks/spectre-ui-astro @phcdevworks/spectre-ui</code>
-          </pre>
-          <pre class="sp-bg-surface sp-rounded-lg sp-p-4">
-<code>{`// src/layouts/BaseLayout.astro
+    <article class="sp-space-y-3">
+      <h2 class="sp-text-2xl sp-font-semibold">Installation summary</h2>
+      <p class="sp-text-muted">
+        Install the Astro integration and the base CSS package, import the CSS
+        bundles once, and start composing components.
+      </p>
+      <pre class="sp-bg-surface sp-rounded-lg sp-p-4 sp-overflow-auto sp-text-sm">
+npm install @phcdevworks/spectre-ui-astro @phcdevworks/spectre-ui
+      </pre>
+      <pre class="sp-bg-surface sp-rounded-lg sp-p-4 sp-overflow-auto sp-text-sm">
+{`// src/layouts/BaseLayout.astro
 import "@phcdevworks/spectre-ui/base.css";
 import "@phcdevworks/spectre-ui/components.css";
-import "@phcdevworks/spectre-ui/utilities.css";`}</code>
-          </pre>
-        </div>
-      </div>
-      <div class="sp-space-y-4 sp-flex-1">
-        <h3 class="sp-text-lg sp-font-semibold">Ship components immediately</h3>
-        <p class="sp-text-muted">
-          Buttons, inputs, and cards inherit the Spectre look and feel without
-          copying a single class.
-        </p>
-        <SpCard variant="base" class="sp-p-4 sp-space-y-3">
-          <SpButton variant="primary" fullWidth>Primary CTA</SpButton>
-          <SpButton variant="secondary" fullWidth>Secondary</SpButton>
-          <SpButton variant="ghost" fullWidth loading>
-            Loading state
-          </SpButton>
-        </SpCard>
-      </div>
-    </SpCard>
+import "@phcdevworks/spectre-ui/utilities.css";`}
+      </pre>
+    </article>
 
-    <section
-      id="components"
-      class="sp-grid sp-grid-cols-1 lg:sp-grid-cols-3 sp-gap-6 sp-text-on-surface"
-    >
-      <SpCard variant="outlined" class="sp-p-6 sp-space-y-4">
-        <h2 class="sp-text-xl sp-font-semibold">Buttons</h2>
-        <p class="sp-text-muted">
-          Built for CRO funnels with success/danger, loading, and disabled
-          states plus polymorphic rendering.
-        </p>
-        <div class="sp-flex sp-flex-wrap sp-gap-3">
-          <SpButton variant="primary">Primary</SpButton>
-          <SpButton variant="secondary">Secondary</SpButton>
-          <SpButton as="a" href="/" variant="ghost">
-            Anchor CTA
-          </SpButton>
-        </div>
-      </SpCard>
+    <article class="sp-space-y-4">
+      <h2 class="sp-text-2xl sp-font-semibold">Why the plugin exists</h2>
+      <ul class="sp-list-disc sp-pl-6 sp-space-y-2">
+        <li>
+          Spectre Tokens define the visual language once; every integration
+          consumes them.
+        </li>
+        <li>
+          Spectre UI wraps those tokens with prebuilt CSS so frameworks never
+          re-encode class recipes.
+        </li>
+        <li>
+          Spectre UI Astro simply exposes the recipes as idiomatic Astro
+          components—no extra styling layer.
+        </li>
+      </ul>
+    </article>
 
-      <SpCard variant="outlined" class="sp-p-6 sp-space-y-4">
-        <h2 class="sp-text-xl sp-font-semibold">Inputs</h2>
-        <p class="sp-text-muted">
-          Helper text, error states, and accessible labels wire up instantly.
-        </p>
-        <form class="sp-space-y-4">
-          <SpInput
-            label="Email"
-            type="email"
-            name="email"
-            placeholder="you@spectre.dev"
-            helperText="Invites ship via email."
-            required
-          />
-          <SpInput
-            label="Workspace"
-            name="workspaceName"
-            state="error"
-            errorMessage="Name already taken."
-          />
-          <SpButton type="submit" variant="success" fullWidth>
-            Request access
-          </SpButton>
-        </form>
-      </SpCard>
-
-      <SpCard variant="outlined" class="sp-p-6 sp-space-y-4">
-        <h2 class="sp-text-xl sp-font-semibold">Cards</h2>
-        <p class="sp-text-muted">
-          Wrap product marketing, onboarding steps, or data with consistent
-          padding and elevation.
-        </p>
-        <SpCard variant="elevated" as="article" class="sp-p-4 sp-space-y-2">
-          <p class="sp-font-mono sp-text-xs sp-text-accent">Surface aware</p>
-          <h3 class="sp-font-semibold">Spectre Launch</h3>
-          <p class="sp-text-sm sp-text-muted">
-            Compose hero tiles, onboarding flows, or dashboards simply by
-            swapping utility classes.
-          </p>
-        </SpCard>
-      </SpCard>
-    </section>
-
-    <section id="suite" class="sp-space-y-6">
-      <div>
-        <p class="sp-font-mono sp-text-xs sp-text-accent">Spectre Suite</p>
-        <h2 class="sp-text-3xl sp-font-semibold">
-          One system, many products.
-        </h2>
-        <p class="sp-text-muted sp-max-w-3xl">
-          Spectre UI Astro is just one touchpoint. Tokens, CSS, icons, and other
-          framework integrations work in concert so you can ship cohesive
-          experiences across Astro, WordPress, Eleventy, and beyond.
-        </p>
-      </div>
-      <div class="sp-grid sp-grid-cols-1 md:sp-grid-cols-2 sp-gap-6">
+    <article class="sp-space-y-4">
+      <h2 class="sp-text-2xl sp-font-semibold">Spectre products</h2>
+      <p class="sp-text-muted">
+        Each repository below is part of the same system. Explore them directly
+        for documentation, changelogs, and roadmaps.
+      </p>
+      <dl class="sp-space-y-4">
         {suiteProducts.map((product) => (
-          <SpCard
-            variant="outlined"
-            class="sp-p-6 sp-space-y-3 sp-flex sp-flex-col sp-justify-between"
-          >
-            <div class="sp-space-y-2">
-              <p class="sp-font-mono sp-text-xs sp-text-accent">
-                {product.tagline}
-              </p>
-              <h3 class="sp-text-xl sp-font-semibold">{product.name}</h3>
-              <p class="sp-text-muted">{product.description}</p>
-            </div>
-            <SpButton as="a" href={product.href} variant="ghost">
-              Explore {product.name}
-            </SpButton>
-          </SpCard>
+          <>
+            <dt class="sp-font-semibold">{product.name}</dt>
+            <dd class="sp-text-muted">
+              <span>{product.summary} </span>
+              <a class="sp-text-accent sp-underline" href={product.url}>
+                {product.url}
+              </a>
+            </dd>
+          </>
         ))}
-      </div>
-    </section>
+      </dl>
+    </article>
+
+    <article class="sp-space-y-3">
+      <h2 class="sp-text-2xl sp-font-semibold">Need more?</h2>
+      <p>
+        Roadmaps, contribution guides, and sponsorship links live in each repo.
+        This page stays text-only by design so the focus remains on the suite
+        rather than a visual demo.
+      </p>
+    </article>
   </section>
 </BaseLayout>
