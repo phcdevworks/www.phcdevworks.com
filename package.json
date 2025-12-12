@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
-    "@phcdevworks/spectre-ui": "^0.0.1",
-    "@phcdevworks/spectre-ui-astro": "^0.0.1",
-    "astro": "^5.16.3"
+    "@phcdevworks/spectre-ui": "^0.0.5",
+    "@phcdevworks/spectre-ui-astro": "^0.0.3",
+    "astro": "^5.16.5"
   },
   "devDependencies": {
     "patch-package": "^8.0.1"
