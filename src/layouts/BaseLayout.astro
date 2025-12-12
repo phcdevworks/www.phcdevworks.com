@@ -15,9 +15,13 @@ const {
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Space+Grotesk:wght@700&display=swap");
-
       * {
         margin: 0;
         padding: 0;
@@ -25,99 +29,87 @@ const {
       }
 
       body {
-        background: #000000;
+        background: #0a0a0a;
         color: #ffffff;
         font-family:
-          "Space Grotesk",
+          "Inter",
           -apple-system,
           BlinkMacSystemFont,
+          "Segoe UI",
           sans-serif;
         overflow-x: hidden;
+        line-height: 1.5;
       }
 
       .mega {
-        font-family: "Inter", sans-serif;
         font-weight: 900;
-        font-size: clamp(4rem, 18vw, 16rem);
-        line-height: 0.85;
-        letter-spacing: -0.05em;
-        color: #ffffff;
+        font-size: clamp(4rem, 15vw, 12rem);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
         text-transform: uppercase;
         margin: 0;
-        word-break: break-word;
       }
 
       .ultra {
-        font-family: "Inter", sans-serif;
         font-weight: 900;
-        font-size: clamp(2.5rem, 12vw, 10rem);
-        line-height: 0.9;
-        letter-spacing: -0.04em;
-        color: #ffffff;
+        font-size: clamp(3rem, 10vw, 8rem);
+        line-height: 0.95;
+        letter-spacing: -0.03em;
         text-transform: uppercase;
         margin: 0;
       }
 
       .massive {
-        font-family: "Inter", sans-serif;
         font-weight: 900;
-        font-size: clamp(2rem, 8vw, 6rem);
+        font-size: clamp(2rem, 6vw, 5rem);
         line-height: 1;
-        letter-spacing: -0.03em;
+        letter-spacing: -0.02em;
         text-transform: uppercase;
       }
 
       .huge {
         font-weight: 700;
-        font-size: clamp(1.5rem, 5vw, 4rem);
-        line-height: 1.1;
-        letter-spacing: -0.02em;
+        font-size: clamp(1.75rem, 4vw, 3.5rem);
+        line-height: 1.15;
+        letter-spacing: -0.015em;
       }
 
       .big {
         font-weight: 700;
-        font-size: clamp(1.25rem, 3vw, 2.5rem);
-        line-height: 1.2;
+        font-size: clamp(1.25rem, 2.5vw, 2rem);
+        line-height: 1.3;
         letter-spacing: -0.01em;
       }
 
-      .editorial {
+      .body {
         font-weight: 400;
-        font-size: clamp(1rem, 2vw, 1.5rem);
-        line-height: 1.4;
-        letter-spacing: -0.01em;
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.6;
+        opacity: 0.8;
       }
 
       .small {
-        font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-        line-height: 1.6;
-        opacity: 0.6;
+        font-size: clamp(0.875rem, 1.25vw, 1rem);
+        line-height: 1.5;
+        opacity: 0.5;
       }
 
       .red {
-        color: #ff0000;
+        color: #ff3366;
       }
 
-      .strike {
-        position: relative;
+      .block-red {
+        background: #ff3366;
+        color: #000000;
+        padding: 0.2em 0.5em;
         display: inline-block;
-      }
-
-      .strike::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 100%;
-        height: 0.15em;
-        background: #ff0000;
-        transform: translateY(-50%) rotate(-2deg);
+        font-weight: 900;
       }
 
       .link {
-        color: #ffffff;
+        color: #ff3366;
         text-decoration: none;
-        border-bottom: 0.25em solid #ff0000;
+        border-bottom: 3px solid #ff3366;
         transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
         font-weight: 700;
       }
