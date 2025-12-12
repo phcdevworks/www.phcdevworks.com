@@ -16,41 +16,132 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Space+Grotesk:wght@700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        background: #0a0a0a;
-        color: #d4d4d4;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Helvetica Neue", Arial, sans-serif;
+        background: #000000;
+        color: #ffffff;
+        font-family:
+          "Space Grotesk",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        overflow-x: hidden;
       }
-      .brand {
-        color: #ff5757;
+
+      .mega {
+        font-family: "Inter", sans-serif;
         font-weight: 900;
+        font-size: clamp(4rem, 18vw, 16rem);
+        line-height: 0.85;
+        letter-spacing: -0.05em;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 0;
+        word-break: break-word;
+      }
+
+      .ultra {
+        font-family: "Inter", sans-serif;
+        font-weight: 900;
+        font-size: clamp(2.5rem, 12vw, 10rem);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .massive {
+        font-family: "Inter", sans-serif;
+        font-weight: 900;
+        font-size: clamp(2rem, 8vw, 6rem);
+        line-height: 1;
         letter-spacing: -0.03em;
+        text-transform: uppercase;
       }
-      .accent-text {
-        color: #ff5757;
-      }
-      .muted-text {
-        color: #8a8a8a;
-      }
-      .link {
-        color: #ff5757;
-        text-decoration: none;
-        border-bottom: 2px solid #ff5757;
-        transition: all 0.2s;
-      }
-      .link:hover {
-        color: #ff8080;
-        border-bottom-color: #ff8080;
-      }
-      .divider {
-        border-top: 1px solid #2a2a2a;
-      }
-      h1,
-      h2,
-      h3 {
-        font-weight: 800;
+
+      .huge {
+        font-weight: 700;
+        font-size: clamp(1.5rem, 5vw, 4rem);
+        line-height: 1.1;
         letter-spacing: -0.02em;
+      }
+
+      .big {
+        font-weight: 700;
+        font-size: clamp(1.25rem, 3vw, 2.5rem);
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+
+      .editorial {
+        font-weight: 400;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+      }
+
+      .small {
+        font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+        line-height: 1.6;
+        opacity: 0.6;
+      }
+
+      .red {
+        color: #ff0000;
+      }
+
+      .strike {
+        position: relative;
+        display: inline-block;
+      }
+
+      .strike::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 0.15em;
+        background: #ff0000;
+        transform: translateY(-50%) rotate(-2deg);
+      }
+
+      .link {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 0.25em solid #ff0000;
+        transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 700;
+      }
+
+      .link:hover {
+        color: #ff0000;
+        border-bottom-color: #ffffff;
+      }
+
+      .block-red {
+        background: #ff0000;
+        color: #000000;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+      }
+
+      .rotate-1 {
+        display: inline-block;
+        transform: rotate(-1deg);
+      }
+
+      .rotate-2 {
+        display: inline-block;
+        transform: rotate(2deg);
       }
     </style>
   </head>
