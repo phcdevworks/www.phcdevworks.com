@@ -1,16 +1,89 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SpButton, SpCard, SpInput } from "@phcdevworks/spectre-ui-astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="PHCDevworks Spectre UI"
+  description="Demonstration of @phcdevworks/spectre-ui-astro components."
+>
+  <section class="sp-container sp-py-16 sp-flex sp-flex-col sp-gap-12">
+    <SpCard
+      variant="elevated"
+      class="sp-max-w-4xl sp-w-full sp-mx-auto sp-rounded-xl sp-py-12 sp-px-10 sp-flex sp-flex-col sp-gap-6"
+    >
+      <header class="sp-space-y-3">
+        <p class="sp-font-mono sp-text-sm sp-uppercase sp-text-accent">
+          Spectre UI
+        </p>
+        <h1 class="sp-text-display">Build polished experiences fast.</h1>
+        <p class="sp-text-lg sp-text-muted">
+          Drop-in components powered by the Spectre design system. Compose
+          layouts, inputs, and CTAs with predictable styles and type-safe APIs.
+        </p>
+      </header>
+      <div class="sp-flex sp-flex-wrap sp-gap-4">
+        <SpButton variant="primary" size="lg">Launch Builder</SpButton>
+        <SpButton as="a" href="#components" variant="ghost" size="lg">
+          View components
+        </SpButton>
+      </div>
+    </SpCard>
+
+    <section
+      id="components"
+      class="sp-grid sp-grid-cols-1 md:sp-grid-cols-3 sp-gap-6"
+    >
+      <SpCard variant="outlined" class="sp-p-6 sp-flex sp-flex-col sp-gap-4">
+        <h2 class="sp-text-xl sp-font-semibold">Buttons</h2>
+        <p class="sp-text-muted">Trigger primary actions or link elsewhere.</p>
+        <div class="sp-flex sp-flex-wrap sp-gap-3">
+          <SpButton variant="primary">Primary</SpButton>
+          <SpButton variant="secondary">Secondary</SpButton>
+          <SpButton variant="ghost" loading> Loading </SpButton>
+        </div>
+      </SpCard>
+
+      <SpCard variant="outlined" class="sp-p-6 sp-flex sp-flex-col sp-gap-4">
+        <h2 class="sp-text-xl sp-font-semibold">Cards</h2>
+        <p class="sp-text-muted">
+          Wrap content with consistent padding and elevation.
+        </p>
+        <SpCard variant="elevated" as="article" class="sp-p-4 sp-space-y-2">
+          <h3 class="sp-font-semibold">Spectre Launch</h3>
+          <p class="sp-text-sm sp-text-muted">
+            Composable primitives, purposeful defaults, and CSS driven by the
+            Spectre design system.
+          </p>
+        </SpCard>
+      </SpCard>
+
+      <SpCard variant="outlined" class="sp-p-6 sp-flex sp-flex-col sp-gap-4">
+        <h2 class="sp-text-xl sp-font-semibold">Inputs</h2>
+        <p class="sp-text-muted">
+          Collect structured data with validation states, helper text, and
+          labels.
+        </p>
+        <form class="sp-space-y-4">
+          <SpInput
+            label="Email"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            helperText="Invitations land in your inbox."
+            required
+          />
+          <SpInput
+            label="Workspace name"
+            name="workspaceName"
+            state="error"
+            errorMessage="Name already taken."
+          />
+          <SpButton type="submit" variant="success" fullWidth>
+            Join waitlist
+          </SpButton>
+        </form>
+      </SpCard>
+    </section>
+  </section>
+</BaseLayout>
