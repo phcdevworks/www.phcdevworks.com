@@ -4,35 +4,45 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="PHCDevworks"
-  description="No images. No animations. No nonsense. Just text and links. This is PHCDevworks."
+  description="Design systems, UI tooling, and developer infrastructure. Open source. Built for developers."
 >
-  <section class="sp-container sp-py-20 sp-space-y-16 sp-max-w-4xl">
-    <article class="sp-space-y-6">
-      <h1 class="sp-text-display sp-leading-tight sp-text-6xl">PHCDevworks</h1>
-      <p class="sp-text-2xl sp-leading-relaxed">
-        No images. No animations. No nonsense.<br />
-        Just text and links.
-      </p>
-      <p class="sp-text-xl sp-text-muted sp-leading-relaxed">
+  <section style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
+    <article style="margin-bottom: 6rem;">
+      <h1
+        class="brand"
+        style="font-size: clamp(3rem, 10vw, 7rem); line-height: 1; margin-bottom: 2rem;"
+      >
+        PHCDEVWORKS
+      </h1>
+      <p
+        style="font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1.3; margin-bottom: 2rem; max-width: 900px;"
+      >
         We build design systems, UI tooling, and developer infrastructure.
+      </p>
+      <p
+        class="muted-text"
+        style="font-size: 1.25rem; line-height: 1.6; max-width: 700px;"
+      >
         Everything is open source. Everything is on GitHub.
       </p>
     </article>
 
-    <article class="sp-space-y-8 sp-border-t sp-border-muted sp-pt-12">
-      <h2 class="sp-text-3xl sp-font-semibold">What We Build</h2>
+    <article class="divider" style="padding-top: 4rem; margin-bottom: 6rem;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800;">
+        Projects
+      </h2>
 
-      <div class="sp-space-y-6">
+      <div style="display: grid; gap: 3rem;">
         <div>
-          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">
             <a
               href="https://github.com/phcdevworks/spectre-tokens"
-              class="sp-underline sp-text-accent hover:sp-no-underline"
+              class="link"
             >
               Spectre Tokens
             </a>
           </h3>
-          <p class="sp-text-muted sp-leading-relaxed">
+          <p class="muted-text" style="font-size: 1.125rem; line-height: 1.7;">
             Design tokens that define the visual language. JSON, JS/TS, CSS
             variables, and Tailwind outputs. One source of truth for every
             surface.
@@ -40,45 +50,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div>
-          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
-            <a
-              href="https://github.com/phcdevworks/spectre-ui"
-              class="sp-underline sp-text-accent hover:sp-no-underline"
-            >
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">
+            <a href="https://github.com/phcdevworks/spectre-ui" class="link">
               Spectre UI
             </a>
           </h3>
-          <p class="sp-text-muted sp-leading-relaxed">
+          <p class="muted-text" style="font-size: 1.125rem; line-height: 1.7;">
             Core styling layer. Consumes tokens, ships CSS. Base styles,
             components, utilities, and recipe helpers. No framework lock-in.
           </p>
         </div>
 
         <div>
-          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">
             <a
               href="https://github.com/phcdevworks/spectre-ui-astro"
-              class="sp-underline sp-text-accent hover:sp-no-underline"
+              class="link"
             >
               Spectre UI Astro
             </a>
           </h3>
-          <p class="sp-text-muted sp-leading-relaxed">
+          <p class="muted-text" style="font-size: 1.125rem; line-height: 1.7;">
             Astro integration. Typed components that map to Spectre UI classes.
             No duplicated logic. No style bloat.
           </p>
         </div>
 
         <div>
-          <h3 class="sp-text-xl sp-font-semibold sp-mb-2">
-            <a
-              href="https://github.com/phcdevworks/spectre-icons"
-              class="sp-underline sp-text-accent hover:sp-no-underline"
-            >
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">
+            <a href="https://github.com/phcdevworks/spectre-icons" class="link">
               Spectre Icons
             </a>
           </h3>
-          <p class="sp-text-muted sp-leading-relaxed">
+          <p class="muted-text" style="font-size: 1.125rem; line-height: 1.7;">
             Icon system tuned to Spectre spacing, stroke, and typography scales.
             Product-ready, no fuss.
           </p>
@@ -86,9 +90,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </article>
 
-    <article class="sp-space-y-6 sp-border-t sp-border-muted sp-pt-12">
-      <h2 class="sp-text-3xl sp-font-semibold">Philosophy</h2>
-      <div class="sp-space-y-4 sp-text-lg sp-leading-relaxed">
+    <article class="divider" style="padding-top: 4rem; margin-bottom: 6rem;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 2rem; font-weight: 800;">
+        Philosophy
+      </h2>
+      <div
+        style="display: grid; gap: 1.5rem; font-size: 1.25rem; line-height: 1.7; max-width: 800px;"
+      >
         <p>Design tokens once. Use everywhere. No copy-paste. No drift.</p>
         <p>
           CSS that consumes tokens. Components that consume CSS. Clean layers.
@@ -98,37 +106,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Open source. No vendor lock. Build what you need. Modify what you
           want.
         </p>
-        <p>
-          This website proves the point: great design doesn't need decoration.
-          It needs clarity.
-        </p>
       </div>
     </article>
 
-    <article class="sp-space-y-6 sp-border-t sp-border-muted sp-pt-12">
-      <h2 class="sp-text-3xl sp-font-semibold">Links</h2>
-      <div class="sp-space-y-2 sp-text-lg">
-        <p>
-          <a
-            href="https://github.com/phcdevworks"
-            class="sp-underline sp-text-accent hover:sp-no-underline"
-          >
+    <article class="divider" style="padding-top: 4rem; margin-bottom: 6rem;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 2rem; font-weight: 800;">
+        Links
+      </h2>
+      <div>
+        <p style="font-size: 1.5rem; margin-bottom: 1rem;">
+          <a href="https://github.com/phcdevworks" class="link">
             github.com/phcdevworks
           </a>
         </p>
-        <p class="sp-text-muted">
-          All repos. All docs. All roadmaps. Everything lives on GitHub.
+        <p class="muted-text" style="font-size: 1.125rem;">
+          All repos. All docs. All roadmaps.
         </p>
       </div>
     </article>
 
-    <footer
-      class="sp-border-t sp-border-muted sp-pt-12 sp-text-muted sp-text-sm"
-    >
-      <p>
-        © 2025 PHCDevworks. Text-only by design. No tracking. No analytics. No
-        cookies.
-      </p>
+    <footer class="divider" style="padding-top: 3rem; padding-bottom: 3rem;">
+      <p class="muted-text" style="font-size: 0.875rem;">© 2025 PHCDevworks</p>
     </footer>
   </section>
 </BaseLayout>
