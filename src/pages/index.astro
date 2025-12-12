@@ -6,146 +6,174 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="PHCDevworks"
   description="Design systems, UI tooling, and developer infrastructure. Open source. Built for developers."
 >
-  <section style="padding: 10vh 5vw;">
-    <article style="margin-bottom: 20vh;">
-      <h1 class="mega" style="margin-bottom: 5vh;">
-        PHC<span class="red">DEV</span><br />WORKS
+  <section style="max-width: 1600px; margin: 0 auto; padding: 8rem 3rem;">
+    <article style="margin-bottom: 12rem;">
+      <h1
+        style="font-size: clamp(5rem, 18vw, 16rem); font-weight: 900; line-height: 0.9; margin-bottom: 4rem; letter-spacing: -0.04em;"
+      >
+        PHCDEV<span style="color: #ff0055;">WORKS</span>
       </h1>
-      <p class="huge" style="margin-bottom: 4vh; max-width: 1200px;">
-        Design systems.<br />
-        UI tooling.<br />
-        <span class="red">Developer infrastructure.</span>
+      <p
+        style="font-size: clamp(2rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin-bottom: 3rem; letter-spacing: -0.02em;"
+      >
+        We build design systems, UI tooling, and developer infrastructure.
       </p>
-      <p class="big" style="max-width: 900px; font-weight: 400;">
-        Everything open source. Everything on GitHub. Built for developers who
-        value quality, performance, and control.
+      <p
+        style="font-size: clamp(1.25rem, 2vw, 1.75rem); line-height: 1.5; opacity: 0.7;"
+      >
+        Everything is open source. Everything is on GitHub.
       </p>
     </article>
 
-    <div class="bar"></div>
+    <article style="margin-bottom: 12rem;">
+      <h2
+        style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; margin-bottom: 6rem; letter-spacing: -0.03em;"
+      >
+        PROJECTS
+      </h2>
 
-    <article style="margin-bottom: 20vh;">
-      <h2 class="ultra" style="margin-bottom: 10vh;">PROJECTS</h2>
-
-      <div style="display: grid; gap: 12vh;">
-        <div style="border-left: 8px solid #ff0055; padding-left: 4rem;">
-          <h3 class="massive" style="margin-bottom: 3vh;">
+      <div style="display: grid; gap: 5rem;">
+        <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+          <h3
+            style="font-size: clamp(2rem, 6vw, 4.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          >
             <a
               href="https://github.com/phcdevworks/spectre-tokens"
-              class="link"
+              style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
             >
-              SPECTRE<br /><span class="red">TOKENS</span>
+              SPECTRE TOKENS
             </a>
           </h3>
-          <p class="huge" style="margin-bottom: 2vh; font-weight: 700;">
-            Core design primitives for the Spectre suite.
-          </p>
-          <p class="big" style="max-width: 1000px; font-weight: 400;">
-            Colors, spacing, typography, radii, shadows. Outputs to CSS
-            variables, JS/TS objects, and theme presets for WordPress, Astro,
-            11ty.
+          <p
+            style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
+          >
+            Core design primitives for the Spectre suite. Colors, spacing,
+            typography, radii, shadows. Outputs to CSS variables, JS/TS objects,
+            and theme presets for WordPress, Astro, 11ty.
           </p>
         </div>
 
-        <div style="border-left: 8px solid #ff0055; padding-left: 4rem;">
-          <h3 class="massive" style="margin-bottom: 3vh;">
-            <a href="https://github.com/phcdevworks/spectre-ui" class="link">
-              SPECTRE<br /><span class="red">UI</span>
+        <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+          <h3
+            style="font-size: clamp(2rem, 6vw, 4.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          >
+            <a
+              href="https://github.com/phcdevworks/spectre-ui"
+              style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+            >
+              SPECTRE UI
             </a>
           </h3>
-          <p class="huge" style="margin-bottom: 2vh; font-weight: 700;">
-            Cross-platform UI built on Spectre Tokens.
-          </p>
-          <p class="big" style="max-width: 1000px; font-weight: 400;">
-            Tailwind-powered design system delivering consistent CSS utilities,
-            component classes, and design recipes for WordPress, Astro, 11ty.
+          <p
+            style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
+          >
+            Cross-platform UI built on Spectre Tokens. Tailwind-powered design
+            system delivering consistent CSS utilities, component classes, and
+            design recipes for WordPress, Astro, 11ty.
           </p>
         </div>
 
-        <div style="border-left: 8px solid #ff0055; padding-left: 4rem;">
-          <h3 class="massive" style="margin-bottom: 3vh;">
+        <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+          <h3
+            style="font-size: clamp(2rem, 6vw, 4.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          >
             <a
               href="https://github.com/phcdevworks/spectre-ui-astro"
-              class="link"
+              style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
             >
-              SPECTRE UI<br /><span class="red">ASTRO</span>
+              SPECTRE UI ASTRO
             </a>
           </h3>
-          <p class="huge" style="margin-bottom: 2vh; font-weight: 700;">
-            First-class Astro layer for Spectre UI.
-          </p>
-          <p class="big" style="max-width: 1000px; font-weight: 400;">
-            Typed, SSR-friendly components (Button, Card, Input) that wrap
-            Spectre UI classes and tokens. Native Astro, zero bloat.
+          <p
+            style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
+          >
+            First-class Astro layer for Spectre UI. Typed, SSR-friendly
+            components (Button, Card, Input) that wrap Spectre UI classes and
+            tokens. Native Astro, zero bloat.
           </p>
         </div>
 
-        <div style="border-left: 8px solid #ff0055; padding-left: 4rem;">
-          <h3 class="massive" style="margin-bottom: 3vh;">
-            <a href="https://github.com/phcdevworks/spectre-icons" class="link">
-              SPECTRE<br /><span class="red">ICONS</span>
+        <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+          <h3
+            style="font-size: clamp(2rem, 6vw, 4.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          >
+            <a
+              href="https://github.com/phcdevworks/spectre-icons"
+              style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+            >
+              SPECTRE ICONS
             </a>
           </h3>
-          <p class="huge" style="margin-bottom: 2vh; font-weight: 700;">
-            Modern SVG icon sets for WordPress builders.
-          </p>
-          <p class="big" style="max-width: 1000px; font-weight: 400;">
-            Lucide, Font Awesome, and more. Unified manager, performance-first.
-            Replaces dozens of separate icon plugins.
+          <p
+            style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
+          >
+            Modern SVG icon sets for WordPress builders. Lucide, Font Awesome,
+            and more. Unified manager, performance-first. Replaces dozens of
+            separate icon plugins.
           </p>
         </div>
       </div>
     </article>
 
-    <div class="bar"></div>
-
-    <article style="margin-bottom: 20vh;">
-      <h2 class="ultra" style="margin-bottom: 10vh;">
-        PHILO<span class="red">SOPHY</span>
+    <article style="margin-bottom: 12rem;">
+      <h2
+        style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; margin-bottom: 6rem; letter-spacing: -0.03em;"
+      >
+        PHILOSOPHY
       </h2>
-      <div style="display: grid; gap: 8vh; max-width: 1400px;">
-        <p class="massive" style="font-weight: 700;">
-          Design tokens <span class="block-red">ONCE</span><br />
-          → Use everywhere.
+      <div style="display: grid; gap: 4rem;">
+        <p
+          style="font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        >
+          Design tokens once. <span style="color: #ff0055;"
+            >Use everywhere.</span
+          >
         </p>
-        <p class="massive" style="font-weight: 700;">
-          Tokens feed CSS<br />
-          → CSS feeds <span class="red">COMPONENTS</span>
+        <p
+          style="font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        >
+          Tokens feed CSS. <span style="color: #ff0055;"
+            >CSS feeds components.</span
+          >
         </p>
-        <p class="massive" style="font-weight: 700;">
-          <span class="block-red">OPEN SOURCE</span><br />
-          → No vendor lock
+        <p
+          style="font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        >
+          <span style="color: #ff0055;">Open source.</span> No vendor lock.
         </p>
-        <p class="massive" style="font-weight: 700;">
-          Build what you need<br />
-          → Modify what you want
+        <p
+          style="font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        >
+          Build what you need. <span style="color: #ff0055;"
+            >Modify what you want.</span
+          >
         </p>
       </div>
     </article>
 
-    <div class="bar"></div>
-
-    <article style="margin-bottom: 15vh;">
-      <h2 class="ultra" style="margin-bottom: 8vh;">
-        FIND<br /><span class="red">US</span>
+    <article style="margin-bottom: 8rem;">
+      <h2
+        style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; margin-bottom: 3rem; letter-spacing: -0.03em;"
+      >
+        LINKS
       </h2>
-      <div>
-        <p class="ultra" style="margin-bottom: 5vh; word-break: break-all;">
-          <a href="https://github.com/phcdevworks" class="link">
-            GITHUB.COM/<br /><span class="red">PHCDEVWORKS</span>
-          </a>
-        </p>
-        <p class="huge" style="max-width: 1200px; font-weight: 400;">
-          All repos → All docs → All roadmaps → Everything public → Everything
-          free
-        </p>
-      </div>
+      <p
+        style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 2rem; letter-spacing: -0.02em;"
+      >
+        <a
+          href="https://github.com/phcdevworks"
+          style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+        >
+          github.com/phcdevworks
+        </a>
+      </p>
+      <p style="font-size: clamp(1.125rem, 1.5vw, 1.25rem); opacity: 0.7;">
+        All repos. All docs. All roadmaps.
+      </p>
     </article>
 
-    <div class="bar"></div>
-
-    <footer style="padding: 8vh 0;">
-      <p class="small">© 2025 PHCDEVWORKS — Pure Typographic Violence</p>
+    <footer style="padding: 4rem 0;">
+      <p style="font-size: 0.875rem; opacity: 0.5;">© 2025 PHCDevworks</p>
     </footer>
   </section>
 </BaseLayout>
