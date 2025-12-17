@@ -6,15 +6,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="PHCDevworks"
   description="Design systems, UI tooling, and developer infrastructure. Open source. Built for developers."
 >
-  <section class="min-h-screen flex flex-col items-center justify-center px-12">
+  <section
+    class="min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12"
+  >
     <div class="w-full max-w-[1200px]">
       <h1
-        class="text-[clamp(4rem,15vw,12rem)] font-black leading-[0.9] mb-16 tracking-[-0.04em]"
+        class="text-[clamp(4rem,15vw,12rem)] font-black leading-[0.9] mb-8 sm:mb-12 lg:mb-16 tracking-[-0.04em]"
       >
         PHCDEV<span class="text-[#ff0055]">WORKS</span>
       </h1>
       <p
-        class="text-[clamp(1.75rem,5vw,4rem)] font-black leading-[1.1] mb-12 tracking-[-0.02em]"
+        class="text-[clamp(1.75rem,5vw,4rem)] font-black leading-[1.1] mb-6 sm:mb-8 lg:mb-12 tracking-[-0.02em]"
       >
         We build design systems, UI tooling, and developer infrastructure.
       </p>
@@ -24,15 +26,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="mb-48 px-12">
+  <section class="mb-24 sm:mb-32 lg:mb-48 px-4 sm:px-8 lg:px-12">
     <h2
-      class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-24 tracking-[-0.03em]"
+      class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-12 sm:mb-16 lg:mb-24 tracking-[-0.03em]"
     >
       PROJECTS
     </h2>
 
-    <div class="grid gap-20">
-      <div class="border-l-4 border-[#ff0055] pl-8">
+    <div class="grid gap-10 sm:gap-16 lg:gap-20">
+      <div class="border-l-4 border-[#ff0055] pl-4 sm:pl-6 lg:pl-8">
         <h3
           class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
@@ -50,7 +52,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
       </div>
 
-      <div class="border-l-4 border-[#ff0055] pl-8">
+      <div class="border-l-4 border-[#ff0055] pl-4 sm:pl-6 lg:pl-8">
         <h3
           class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
@@ -68,7 +70,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
       </div>
 
-      <div class="border-l-4 border-[#ff0055] pl-8">
+      <div class="border-l-4 border-[#ff0055] pl-4 sm:pl-6 lg:pl-8">
         <h3
           class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
@@ -86,7 +88,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
       </div>
 
-      <div class="border-l-4 border-[#ff0055] pl-8">
+      <div class="border-l-4 border-[#ff0055] pl-4 sm:pl-6 lg:pl-8">
         <h3
           class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
@@ -106,62 +108,62 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section style="margin-bottom: 12rem;">
+  <section class="mb-24 sm:mb-32 lg:mb-48 px-4 sm:px-8 lg:px-12">
     <h2
-      style="font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 900; margin-bottom: 6rem; letter-spacing: -0.03em;"
+      class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-12 sm:mb-16 lg:mb-24 tracking-[-0.03em]"
     >
       PHILOSOPHY
     </h2>
-    <div style="display: grid; gap: 4rem;">
+    <div class="grid gap-8 sm:gap-12 lg:gap-16">
       <p
-        style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        class="text-[clamp(1.5rem,4vw,3rem)] font-black leading-tight tracking-[-0.02em]"
       >
-        Design tokens once. <span style="color: #ff0055;">Use everywhere.</span>
+        Design tokens once. <span class="text-[#ff0055]">Use everywhere.</span>
       </p>
       <p
-        style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        class="text-[clamp(1.5rem,4vw,3rem)] font-black leading-tight tracking-[-0.02em]"
       >
-        Tokens feed CSS. <span style="color: #ff0055;"
-          >CSS feeds components.</span
+        Tokens feed CSS. <span class="text-[#ff0055]">
+          CSS feeds components.</span
         >
       </p>
       <p
-        style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        class="text-[clamp(1.5rem,4vw,3rem)] font-black leading-tight tracking-[-0.02em]"
       >
-        <span style="color: #ff0055;">Open source.</span> No vendor lock.
+        <span class="text-[#ff0055]">Open source.</span> No vendor lock.
       </p>
       <p
-        style="font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.02em;"
+        class="text-[clamp(1.5rem,4vw,3rem)] font-black leading-tight tracking-[-0.02em]"
       >
-        Build what you need. <span style="color: #ff0055;"
-          >Modify what you want.</span
+        Build what you need. <span class="text-[#ff0055]">
+          Modify what you want.</span
         >
       </p>
     </div>
   </section>
 
-  <section style="margin-bottom: 8rem;">
+  <section class="mb-16 sm:mb-24 lg:mb-32 px-4 sm:px-8 lg:px-12">
     <h2
-      style="font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 900; margin-bottom: 3rem; letter-spacing: -0.03em;"
+      class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-6 sm:mb-8 lg:mb-12 tracking-[-0.03em]"
     >
       LINKS
     </h2>
     <p
-      style="font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 2rem; letter-spacing: -0.02em;"
+      class="text-[clamp(1.5rem,4vw,2.5rem)] font-black mb-4 sm:mb-6 lg:mb-8 tracking-[-0.02em]"
     >
       <a
         href="https://github.com/phcdevworks"
-        style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+        class="text-[#ff0055] no-underline border-b-4 border-[#ff0055]"
       >
         github.com/phcdevworks
       </a>
     </p>
-    <p style="font-size: clamp(1.125rem, 1.5vw, 1.25rem); opacity: 0.7;">
+    <p class="text-[clamp(1.125rem,1.5vw,1.25rem)] opacity-70">
       All repos. All docs. All roadmaps.
     </p>
   </section>
 
-  <footer style="padding: 4rem 0;">
-    <p style="font-size: 0.875rem; opacity: 0.5;">© 2025 PHCDevworks</p>
+  <footer class="py-8 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-12">
+    <p class="text-sm opacity-50">© 2025 PHCDevworks</p>
   </footer>
 </BaseLayout>
