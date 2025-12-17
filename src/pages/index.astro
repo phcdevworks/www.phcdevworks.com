@@ -6,104 +6,98 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="PHCDevworks"
   description="Design systems, UI tooling, and developer infrastructure. Open source. Built for developers."
 >
-  <section class="min-h-screen flex flex-col items-center justify-center">
-    <h1
-      class="text-[clamp(4rem,15vw,12rem)] font-black leading-[0.9] mb-16 tracking-[-0.04em]"
-    >
-      PHCDEV<span class="text-[#ff0055]">WORKS</span>
-    </h1>
-    <p
-      class="text-[clamp(1.75rem,5vw,4rem)] font-black leading-[1.1] mb-12 tracking-[-0.02em]"
-    >
-      We build design systems, UI tooling, and developer infrastructure.
-    </p>
-    <p class="text-[clamp(1.25rem,2vw,1.75rem)] leading-normal opacity-70">
-      Everything is open source. Everything is on GitHub.
-    </p>
+  <section class="min-h-screen flex flex-col items-center justify-center px-12">
+    <div class="w-full max-w-[1200px]">
+      <h1
+        class="text-[clamp(4rem,15vw,12rem)] font-black leading-[0.9] mb-16 tracking-[-0.04em]"
+      >
+        PHCDEV<span class="text-[#ff0055]">WORKS</span>
+      </h1>
+      <p
+        class="text-[clamp(1.75rem,5vw,4rem)] font-black leading-[1.1] mb-12 tracking-[-0.02em]"
+      >
+        We build design systems, UI tooling, and developer infrastructure.
+      </p>
+      <p class="text-[clamp(1.25rem,2vw,1.75rem)] leading-normal opacity-70">
+        Everything is open source. Everything is on GitHub.
+      </p>
+    </div>
   </section>
 
-  <section style="margin-bottom: 12rem;">
+  <section class="mb-48 px-12">
     <h2
-      style="font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 900; margin-bottom: 6rem; letter-spacing: -0.03em;"
+      class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-24 tracking-[-0.03em]"
     >
       PROJECTS
     </h2>
 
-    <div style="display: grid; gap: 5rem;">
-      <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+    <div class="grid gap-20">
+      <div class="border-l-4 border-[#ff0055] pl-8">
         <h3
-          style="font-size: clamp(1.75rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
           <a
             href="https://github.com/phcdevworks/spectre-tokens"
-            style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+            class="text-[#ff0055] no-underline border-b-4 border-[#ff0055]"
           >
             SPECTRE TOKENS
           </a>
         </h3>
-        <p
-          style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
-        >
+        <p class="text-[clamp(1.25rem,2vw,1.5rem)] leading-relaxed opacity-80">
           Core design primitives for the Spectre suite. Colors, spacing,
           typography, radii, shadows. Outputs to CSS variables, JS/TS objects,
           and theme presets for WordPress, Astro, 11ty.
         </p>
       </div>
 
-      <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+      <div class="border-l-4 border-[#ff0055] pl-8">
         <h3
-          style="font-size: clamp(1.75rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
           <a
             href="https://github.com/phcdevworks/spectre-ui"
-            style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+            class="text-[#ff0055] no-underline border-b-4 border-[#ff0055]"
           >
             SPECTRE UI
           </a>
         </h3>
-        <p
-          style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
-        >
+        <p class="text-[clamp(1.25rem,2vw,1.5rem)] leading-relaxed opacity-80">
           Cross-platform UI built on Spectre Tokens. Tailwind-powered design
           system delivering consistent CSS utilities, component classes, and
           design recipes for WordPress, Astro, 11ty.
         </p>
       </div>
 
-      <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+      <div class="border-l-4 border-[#ff0055] pl-8">
         <h3
-          style="font-size: clamp(1.75rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
           <a
             href="https://github.com/phcdevworks/spectre-ui-astro"
-            style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+            class="text-[#ff0055] no-underline border-b-4 border-[#ff0055]"
           >
             SPECTRE UI ASTRO
           </a>
         </h3>
-        <p
-          style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
-        >
+        <p class="text-[clamp(1.25rem,2vw,1.5rem)] leading-relaxed opacity-80">
           First-class Astro layer for Spectre UI. Typed, SSR-friendly components
           (Button, Card, Input) that wrap Spectre UI classes and tokens. Native
           Astro, zero bloat.
         </p>
       </div>
 
-      <div style="border-left: 4px solid #ff0055; padding-left: 2rem;">
+      <div class="border-l-4 border-[#ff0055] pl-8">
         <h3
-          style="font-size: clamp(1.75rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;"
+          class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
         >
           <a
             href="https://github.com/phcdevworks/spectre-icons"
-            style="color: #ff0055; text-decoration: none; border-bottom: 4px solid #ff0055;"
+            class="text-[#ff0055] no-underline border-b-4 border-[#ff0055]"
           >
             SPECTRE ICONS
           </a>
         </h3>
-        <p
-          style="font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.6; opacity: 0.8;"
-        >
+        <p class="text-[clamp(1.25rem,2vw,1.5rem)] leading-relaxed opacity-80">
           Modern SVG icon sets for WordPress builders. Lucide, Font Awesome, and
           more. Unified manager, performance-first. Replaces dozens of separate
           icon plugins.
