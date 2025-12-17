@@ -1,5 +1,6 @@
 ---
 import Hero from "../components/Hero.astro";
+import Links from "../components/Links.astro";
 import Philosophy from "../components/Philosophy.astro";
 import Projects from "../components/Projects.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -15,30 +16,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <Philosophy />
 
-  <section
-    class="mb-16 sm:mb-24 lg:mb-32 px-4 sm:px-8 lg:px-12 overflow-hidden"
-    aria-labelledby="links-heading"
-  >
-    <h2
-      id="links-heading"
-      class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-6 sm:mb-8 lg:mb-12 tracking-[-0.03em]"
-    >
-      LINKS
-    </h2>
-    <p
-      class="text-[clamp(1.5rem,4vw,2.5rem)] font-black mb-4 sm:mb-6 lg:mb-8 tracking-[-0.02em] break-words"
-    >
-      <a
-        href="https://github.com/phcdevworks"
-        class="text-[#ff0055] no-underline border-b-4 border-[#ff0055]"
-      >
-        github.com/phcdevworks
-      </a>
-    </p>
-    <p class="text-[clamp(1.125rem,1.5vw,1.25rem)] opacity-70">
-      All repos. All docs. All roadmaps.
-    </p>
-  </section>
+  <Links />
 
   <footer class="py-8 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-12">
     <p class="text-sm opacity-50">© 2025 PHCDevworks</p>

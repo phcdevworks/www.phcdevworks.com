@@ -1,0 +1,31 @@
+---
+import Section from "./Section.astro";
+
+const headingId = "links-heading";
+---
+
+<Section
+  aria-labelledby={headingId}
+  class="overflow-hidden"
+  innerClass="max-w-[900px] w-full"
+>
+  <h2
+    id={headingId}
+    class="text-[clamp(2.25rem,7vw,5rem)] font-black mb-6 sm:mb-8 lg:mb-12 tracking-[-0.03em]"
+  >
+    LINKS
+  </h2>
+  <p
+    class="text-[clamp(1.25rem,4vw,2.25rem)] font-black mb-4 sm:mb-6 lg:mb-8 tracking-[-0.02em] break-words"
+  >
+    <a
+      href="https://github.com/phcdevworks"
+      class="text-[#ff0055] no-underline border-b-2 sm:border-b-4 border-[#ff0055]"
+    >
+      github.com/phcdevworks
+    </a>
+  </p>
+  <p class="text-base sm:text-lg opacity-70">
+    All repos. All docs. All roadmaps.
+  </p>
+</Section>

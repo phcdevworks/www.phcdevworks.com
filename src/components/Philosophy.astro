@@ -1,4 +1,5 @@
----
+import Section from "./Section.astro";
+
 const statements = [
   {
     id: "design",
@@ -29,21 +30,18 @@ const statements = [
 const headingId = "philosophy-heading";
 ---
 
-<section
-  class="mb-24 sm:mb-32 lg:mb-48 px-4 sm:px-8 lg:px-12"
-  aria-labelledby={headingId}
->
+<Section aria-labelledby={headingId}>
   <h2
     id={headingId}
-    class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-12 sm:mb-16 lg:mb-24 tracking-[-0.03em]"
+    class="text-[clamp(2.25rem,7vw,5.5rem)] font-black mb-10 sm:mb-14 lg:mb-20 tracking-[-0.03em]"
   >
     PHILOSOPHY
   </h2>
-  <div class="grid gap-8 sm:gap-12 lg:gap-16">
+  <div class="grid gap-6 sm:gap-10 lg:gap-14">
     {statements.map(({ id, primary, secondary, accentOnPrimary }) => (
       <p
         id={`${id}-statement`}
-        class="text-[clamp(1.5rem,4vw,3rem)] font-black leading-tight tracking-[-0.02em]"
+        class="text-[clamp(1.1875rem,3.5vw,2.75rem)] font-black leading-tight tracking-[-0.02em]"
       >
         {accentOnPrimary ? (
           <>
@@ -57,4 +55,4 @@ const headingId = "philosophy-heading";
       </p>
     ))}
   </div>
-</section>
+</Section>
