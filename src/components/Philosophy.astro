@@ -1,0 +1,60 @@
+---
+const statements = [
+  {
+    id: "design",
+    primary: "Design tokens once.",
+    secondary: "Use everywhere.",
+    accentOnPrimary: false,
+  },
+  {
+    id: "tokens",
+    primary: "Tokens feed CSS.",
+    secondary: "CSS feeds components.",
+    accentOnPrimary: false,
+  },
+  {
+    id: "open-source",
+    primary: "Open source.",
+    secondary: "No vendor lock.",
+    accentOnPrimary: true,
+  },
+  {
+    id: "build",
+    primary: "Build what you need.",
+    secondary: "Modify what you want.",
+    accentOnPrimary: false,
+  },
+];
+
+const headingId = "philosophy-heading";
+---
+
+<section
+  class="mb-24 sm:mb-32 lg:mb-48 px-4 sm:px-8 lg:px-12"
+  aria-labelledby={headingId}
+>
+  <h2
+    id={headingId}
+    class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-12 sm:mb-16 lg:mb-24 tracking-[-0.03em]"
+  >
+    PHILOSOPHY
+  </h2>
+  <div class="grid gap-8 sm:gap-12 lg:gap-16">
+    {statements.map(({ id, primary, secondary, accentOnPrimary }) => (
+      <p
+        id={`${id}-statement`}
+        class="text-[clamp(1.5rem,4vw,3rem)] font-black leading-tight tracking-[-0.02em]"
+      >
+        {accentOnPrimary ? (
+          <>
+            <span class="text-[#ff0055]">{primary}</span> {secondary}
+          </>
+        ) : (
+          <>
+            {primary} <span class="text-[#ff0055]">{secondary}</span>
+          </>
+        )}
+      </p>
+    ))}
+  </div>
+</section>

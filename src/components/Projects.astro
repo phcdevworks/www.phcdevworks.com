@@ -1,0 +1,41 @@
+---
+import { projects } from "../data/projects";
+
+const headingId = "projects-heading";
+---
+
+<section
+  class="mb-24 sm:mb-32 lg:mb-48 px-4 sm:px-8 lg:px-12"
+  aria-labelledby={headingId}
+>
+  <h2
+    id={headingId}
+    class="text-[clamp(2.5rem,8vw,6rem)] font-black mb-12 sm:mb-16 lg:mb-24 tracking-[-0.03em]"
+  >
+    PROJECTS
+  </h2>
+
+  <div class="grid gap-10 sm:gap-16 lg:gap-20">
+    {projects.map((project) => (
+      <article
+        class="border-l-4 border-[#ff0055] pl-4 sm:pl-6 lg:pl-8"
+        aria-labelledby={`${project.id}-title`}
+      >
+        <h3
+          id={`${project.id}-title`}
+          class="text-[clamp(1.75rem,5vw,3.5rem)] font-black mb-4 tracking-[-0.02em]"
+        >
+          <a
+            href={project.href}
+            class="text-[#ff0055] no-underline border-b-4 border-[#ff0055] break-all"
+          >
+            {project.title}
+          </a>
+        </h3>
+        <p class="text-[clamp(1.25rem,2vw,1.5rem)] leading-relaxed opacity-80">
+          {project.description}
+        </p>
+      </article>
+    ))}
+  </div>
+</section>
