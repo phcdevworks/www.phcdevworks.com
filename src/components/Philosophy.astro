@@ -1,58 +1,35 @@
-import Section from "./Section.astro";
-
-const statements = [
-  {
-    id: "design",
-    primary: "Design tokens once.",
-    secondary: "Use everywhere.",
-    accentOnPrimary: false,
-  },
-  {
-    id: "tokens",
-    primary: "Tokens feed CSS.",
-    secondary: "CSS feeds components.",
-    accentOnPrimary: false,
-  },
-  {
-    id: "open-source",
-    primary: "Open source.",
-    secondary: "No vendor lock.",
-    accentOnPrimary: true,
-  },
-  {
-    id: "build",
-    primary: "Build what you need.",
-    secondary: "Modify what you want.",
-    accentOnPrimary: false,
-  },
-];
-
-const headingId = "philosophy-heading";
----
-
-<Section aria-labelledby={headingId}>
-  <h2
-    id={headingId}
-    class="text-[clamp(2.25rem,7vw,5.5rem)] font-black mb-10 sm:mb-14 lg:mb-20 tracking-[-0.03em]"
-  >
-    PHILOSOPHY
-  </h2>
-  <div class="grid gap-6 sm:gap-10 lg:gap-14">
-    {statements.map(({ id, primary, secondary, accentOnPrimary }) => (
+<section class="px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-24">
+  <div class="max-w-[1200px] w-full mx-auto">
+    <h2
+      class="text-[clamp(2.25rem,7vw,5.5rem)] font-black mb-10 sm:mb-14 lg:mb-20 tracking-[-0.03em]"
+    >
+      PHILOSOPHY
+    </h2>
+    <div class="grid gap-6 sm:gap-10 lg:gap-14">
       <p
-        id={`${id}-statement`}
         class="text-[clamp(1.1875rem,3.5vw,2.75rem)] font-black leading-tight tracking-[-0.02em]"
       >
-        {accentOnPrimary ? (
-          <>
-            <span class="text-[#ff0055]">{primary}</span> {secondary}
-          </>
-        ) : (
-          <>
-            {primary} <span class="text-[#ff0055]">{secondary}</span>
-          </>
-        )}
+        Design tokens once. <span class="text-[#ff0055]">Use everywhere.</span>
       </p>
-    ))}
+      <p
+        class="text-[clamp(1.1875rem,3.5vw,2.75rem)] font-black leading-tight tracking-[-0.02em]"
+      >
+        Tokens feed CSS. <span class="text-[#ff0055]"
+          >CSS feeds components.</span
+        >
+      </p>
+      <p
+        class="text-[clamp(1.1875rem,3.5vw,2.75rem)] font-black leading-tight tracking-[-0.02em]"
+      >
+        <span class="text-[#ff0055]">Open source.</span> No vendor lock.
+      </p>
+      <p
+        class="text-[clamp(1.1875rem,3.5vw,2.75rem)] font-black leading-tight tracking-[-0.02em]"
+      >
+        Build what you need. <span class="text-[#ff0055]"
+          >Modify what you want.</span
+        >
+      </p>
+    </div>
   </div>
-</Section>
+</section>
