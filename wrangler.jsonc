@@ -1,7 +1,8 @@
 {
   "name": "www-phcdevworks-com",
   "compatibility_date": "2025-11-30",
-  "assets": {
-    "directory": "./dist"
+  "main": "dist/_worker.js",
+  "site": {
+    "bucket": "dist"
   }
 }
