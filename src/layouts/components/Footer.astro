@@ -1,0 +1,58 @@
+---
+import Facebook from "@src/icons/social/social-media-facebook.svg";
+import X from "@src/icons/social/social-media-x.svg";
+import GitHub from "@src/icons/social/social-media-github.svg";
+import LinkedIn from "@src/icons/social/social-media-linkedin.svg";
+const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://go.phcdev.co/facebook",
+    Icon: Facebook,
+  },
+  { name: "X", href: "https://go.phcdev.co/x", Icon: X },
+  { name: "GitHub", href: "https://go.phcdev.co/github", Icon: GitHub },
+  {
+    name: "LinkedIn",
+    href: "https://go.phcdev.co/linkedin",
+    Icon: LinkedIn,
+  },
+];
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8">
+    <nav
+      aria-label="Footer"
+      class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
+    >
+      {
+        ["About", "Blog", "Jobs", "Press", "Accessibility", "Partners"].map(
+          (label) => (
+            <a href="#" class="text-gray-600 hover:text-gray-900">
+              {label}
+            </a>
+          )
+        )
+      }
+    </nav>
+
+    <div class="mt-16 flex justify-center gap-x-10">
+      {
+        socialLinks.map(({ name, href, Icon }) => (
+          <a
+            href={href}
+            class="text-gray-600 hover:text-gray-800"
+            aria-label={name}
+          >
+            <Icon class="size-6" aria-hidden="true" />
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="mt-10 text-center text-sm/6 text-gray-600">
+      &copy; {year} PHCDevworks. All rights reserved.
+    </p>
+  </div>
+</footer>
