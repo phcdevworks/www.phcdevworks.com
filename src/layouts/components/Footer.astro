@@ -20,14 +20,14 @@ const socialLinks = [
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-white">
+<footer class="bg-white dark:bg-gray-900">
   <div class="mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8">
     <div class="mt-16 flex justify-center gap-x-10">
       {
         socialLinks.map(({ name, href, Icon }) => (
           <a
             href={href}
-            class="text-gray-600 hover:text-gray-800"
+            class="text-gray-700 dark:text-gray-300"
             aria-label={name}
           >
             <Icon class="size-6" aria-hidden="true" />
@@ -36,7 +36,7 @@ const year = new Date().getFullYear();
       }
     </div>
 
-    <p class="mt-10 text-center text-sm/6 text-gray-600">
+    <p class="mt-10 text-center text-sm/6 text-gray-500 dark:text-gray-400">
       &copy; {year} PHCDevworks. All rights reserved.
     </p>
   </div>
