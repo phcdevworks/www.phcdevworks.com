@@ -37,15 +37,11 @@ const year = new Date().getFullYear();
     class="min-h-screen flex flex-col bg-[#0a0a0a] text-white overflow-x-hidden leading-normal"
   >
     <main class="flex-1">
-      <div class="max-w-[1600px] mx-auto w-full p-2 sm:p-0">
-        <slot />
-      </div>
+      <slot />
     </main>
 
     <footer>
-      <div class="max-w-[1600px] mx-auto w-full p-2 sm:p-0">
-        <Footer year={year} />
-      </div>
+      <Footer year={year} />
     </footer>
   </body>
 </html>
