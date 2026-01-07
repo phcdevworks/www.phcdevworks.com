@@ -1,75 +1,61 @@
+---
+const projects = [
+  {
+    label: "SPECTRE TOKENS",
+    href: "https://github.com/phcdevworks/spectre-tokens",
+    description:
+      "Core design primitives for the Spectre suite. Colors, spacing, typography, radii, shadows. Outputs to CSS variables, JS/TS objects, and theme presets for WordPress, Astro, 11ty.",
+  },
+  {
+    label: "SPECTRE UI",
+    href: "https://github.com/phcdevworks/spectre-ui",
+    description:
+      "Cross-platform UI built on Spectre Tokens. Tailwind-powered design system delivering consistent CSS utilities, component classes, and design recipes for WordPress, Astro, 11ty.",
+  },
+  {
+    label: "SPECTRE UI ASTRO",
+    href: "https://github.com/phcdevworks/spectre-ui-astro",
+    description:
+      "First-class Astro layer for Spectre UI. Typed, SSR-friendly components (Button, Card, Input) that wrap Spectre UI classes and tokens. Native Astro, zero bloat.",
+  },
+  {
+    label: "SPECTRE ICONS",
+    href: "https://github.com/phcdevworks/spectre-icons",
+    description:
+      "Modern SVG icon sets for WordPress builders. Lucide, Font Awesome, and more. Unified manager, performance-first. Replaces dozens of separate icon plugins.",
+  },
+];
+---
+
 <section class="px-16 py-20 sm:px-8 sm:py-24 bg-gray-50 dark:bg-gray-800">
   <h2
     class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-14 tracking-tight"
   >
     PROJECTS
   </h2>
-  <article class="border-l-4 border-[#ff0055] pl-6 mb-12">
-    <h3
-      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-3 tracking-tight"
-    >
-      <a
-        href="https://github.com/phcdevworks/spectre-tokens"
-        class="text-[#ff0055] border-b-4 border-[#ff0055]"
+  {
+    projects.map(({ label, href, description }, index) => (
+      <article
+        class={`border-l-4 border-[#ff0055] pl-6 ${
+          index < projects.length - 1 ? "mb-12" : ""
+        }`}
       >
-        SPECTRE TOKENS
-      </a>
-    </h3>
-    <p class="text-base sm:text-lg md:text-xl opacity-80">
-      Core design primitives for the Spectre suite. Colors, spacing, typography,
-      radii, shadows. Outputs to CSS variables, JS/TS objects, and theme presets
-      for WordPress, Astro, 11ty.
-    </p>
-  </article>
-  <article class="border-l-4 border-[#ff0055] pl-6 mb-12">
-    <h3
-      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-3 tracking-tight"
-    >
-      <a
-        href="https://github.com/phcdevworks/spectre-ui"
-        class="text-[#ff0055] border-b-4 border-[#ff0055]"
-      >
-        SPECTRE UI
-      </a>
-    </h3>
-    <p class="text-base sm:text-lg md:text-xl opacity-80">
-      Cross-platform UI built on Spectre Tokens. Tailwind-powered design system
-      delivering consistent CSS utilities, component classes, and design recipes
-      for WordPress, Astro, 11ty.
-    </p>
-  </article>
-  <article class="border-l-4 border-[#ff0055] pl-6 mb-12">
-    <h3
-      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-3 tracking-tight"
-    >
-      <a
-        href="https://github.com/phcdevworks/spectre-ui-astro"
-        class="text-[#ff0055] border-b-4 border-[#ff0055]"
-      >
-        SPECTRE UI ASTRO
-      </a>
-    </h3>
-    <p class="text-base sm:text-lg md:text-xl opacity-80">
-      First-class Astro layer for Spectre UI. Typed, SSR-friendly components
-      (Button, Card, Input) that wrap Spectre UI classes and tokens. Native
-      Astro, zero bloat.
-    </p>
-  </article>
-  <article class="border-l-4 border-[#ff0055] pl-6">
-    <h3
-      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-3 tracking-tight"
-    >
-      <a
-        href="https://github.com/phcdevworks/spectre-icons"
-        class="text-[#ff0055] border-b-4 border-[#ff0055]"
-      >
-        SPECTRE ICONS
-      </a>
-    </h3>
-    <p class="text-base sm:text-lg md:text-xl opacity-80">
-      Modern SVG icon sets for WordPress builders. Lucide, Font Awesome, and
-      more. Unified manager, performance-first. Replaces dozens of separate icon
-      plugins.
-    </p>
-  </article>
+        <h3
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-3 tracking-tight"
+        >
+          <a
+            href={href}
+            title={label}
+            aria-label={label}
+            class="text-[#ff0055] border-b-4 border-[#ff0055]"
+          >
+            {label}
+          </a>
+        </h3>
+        <p class="text-base sm:text-lg md:text-xl opacity-80">
+          {description}
+        </p>
+      </article>
+    ))
+  }
 </section>

@@ -1,18 +1,34 @@
+---
+const links = [
+  {
+    label: "github.com/phcdevworks",
+    href: "https://github.com/phcdevworks",
+    description: "All repos. All docs. All roadmaps.",
+  },
+];
+---
+
 <section class="px-16 py-20 sm:px-8 sm:py-24 bg-gray-50 dark:bg-gray-800">
   <h2
     class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 tracking-tight"
   >
     LINKS
   </h2>
-  <p class="text-2xl sm:text-3xl md:text-4xl font-black mb-6 tracking-tight">
-    <a
-      href="https://github.com/phcdevworks"
-      class="text-[#ff0055] border-b-4 border-[#ff0055]"
-    >
-      github.com/phcdevworks
-    </a>
-  </p>
-  <p class="text-lg sm:text-xl opacity-70">
-    All repos. All docs. All roadmaps.
-  </p>
+  {
+    links.map(({ label, href, description }) => (
+      <>
+        <p class="text-2xl sm:text-3xl md:text-4xl mb-6 tracking-tight">
+          <a
+            href={href}
+            title={label}
+            aria-label={label}
+            class="text-[#ff0055] border-b-4 border-[#ff0055]"
+          >
+            {label}
+          </a>
+        </p>
+        <p class="text-lg sm:text-xl opacity-70">{description}</p>
+      </>
+    ))
+  }
 </section>

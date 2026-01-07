@@ -1,29 +1,49 @@
+---
+const statements = [
+  {
+    segments: [
+      { text: "Design tokens once. " },
+      { text: "Use everywhere.", highlight: true },
+    ],
+  },
+  {
+    segments: [
+      { text: "Tokens feed CSS. " },
+      { text: "CSS feeds components.", highlight: true },
+    ],
+  },
+  {
+    segments: [
+      { text: "Open source.", highlight: true },
+      { text: " No vendor lock." },
+    ],
+  },
+  {
+    segments: [
+      { text: "Build what you need. " },
+      { text: "Modify what you want.", highlight: true },
+    ],
+  },
+];
+---
+
 <section class="px-16 py-20 sm:px-8 sm:py-24 bg-white dark:bg-gray-900">
   <h2
     class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-14 tracking-tight"
   >
     PHILOSOPHY
   </h2>
-  <p
-    class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight mb-10 tracking-tight"
-  >
-    Design tokens once. <span class="text-[#ff0055]">Use everywhere.</span>
-  </p>
-  <p
-    class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight mb-10 tracking-tight"
-  >
-    Tokens feed CSS. <span class="text-[#ff0055]">CSS feeds components.</span>
-  </p>
-  <p
-    class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight mb-10 tracking-tight"
-  >
-    <span class="text-[#ff0055]">Open source.</span> No vendor lock.
-  </p>
-  <p
-    class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight"
-  >
-    Build what you need. <span class="text-[#ff0055]"
-      >Modify what you want.</span
-    >
-  </p>
+  {
+    statements.map(({ segments }, index) => (
+      <p
+        class={`text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight tracking-tight ${
+          index < statements.length - 1 ? "mb-10" : ""
+        }`}
+      >
+        {segments.map(({ text, highlight }) =>
+          highlight ? <span class="text-[#ff0055]">{text}</span> : text
+        )}
+      </p>
+    ))
+  }
 </section>
