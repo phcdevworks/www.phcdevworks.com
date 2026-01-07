@@ -4,6 +4,7 @@ import "@phcdevworks/spectre-ui/base.css";
 import "@phcdevworks/spectre-ui/components.css";
 import "@phcdevworks/spectre-ui/utilities.css";
 
+import Header from "./components/Header.astro";
 import Footer from "./components/Footer.astro";
 
 const {
@@ -32,7 +33,9 @@ const year = new Date().getFullYear();
       rel="stylesheet"
     />
   </head>
-
+  <header class="bg-gray-900">
+    <Footer />
+  </header>
   <body
     class="min-h-screen flex flex-col bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden leading-normal"
   >
@@ -43,4 +46,6 @@ const year = new Date().getFullYear();
       <Footer />
     </footer>
   </body>
+
+
 </html>
