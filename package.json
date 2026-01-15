@@ -10,11 +10,11 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
-    "@astrojs/sitemap": "^3.6.0",
-    "@phcdevworks/spectre-ui": "^0.0.5",
-    "@phcdevworks/spectre-ui-astro": "^0.0.3",
-    "astro": "^5.16.5"
+    "@astrojs/cloudflare": "^3.1.2",
+    "@astrojs/sitemap": "^3.6.1",
+    "@phcdevworks/spectre-ui": "^0.4.1",
+    "@phcdevworks/spectre-ui-astro": "^0.1.1",
+    "astro": "^5.16.9"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",
